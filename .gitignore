@@ -1,0 +1,4 @@
+# Ignorar arquivos de configuração do .NET
+appsettings.json
+appsettings.Development.json
+appsettings.*.json
