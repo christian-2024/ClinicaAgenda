@@ -2,6 +2,8 @@ using ClinAgenda.src.Application.DTOs.Status;
 using ClinAgendaAPI;
 using Microsoft.AspNetCore.Mvc;
 
+using ClinAgendaAPI.StatusUseCase;
+
 namespace ClinAgenda.src.WebAPI.Controllers
 {
     [ApiController]

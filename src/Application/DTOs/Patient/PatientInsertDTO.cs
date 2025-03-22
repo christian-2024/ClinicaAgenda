@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ClinAgenda.src.Application.DTOs.Patient
 {
-    public class PatuentInsertDTO
+    public class PatientInsertDTO
     {
         public required string Name { get; set; }
 

@@ -9,4 +9,4 @@ namespace ClinAgenda.src.Application.DTOs.Status
     {
         public required string Name { get; set; }
     }
-}
+}   

@@ -7,6 +7,7 @@ namespace ClinAgenda.src.Application.DTOs.Patient
 {
     public class PatientDTO
     {
+        public int id { get; set;}
         public required string Name { get; set; }
 
         public required string PhoneNumber { get; set; }

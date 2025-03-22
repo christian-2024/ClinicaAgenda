@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ClinAgendaAPI
+namespace ClinAgenda.src.Application.DTOs.Specialty
 {
-    public class Specialty
+    public class SpecialtyDTO
     {
-        public int Id { get; set; }
+        public int id { get; set; }
+
         public required string Name { get; set; }
+
         public int ScheduleDuration { get; set; }
     }
 }
