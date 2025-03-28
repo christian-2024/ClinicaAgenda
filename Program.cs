@@ -1,8 +1,8 @@
 using ClinAgenda.src.Application.UseCases;
 using ClinAgenda.src.Core.Interfaces;
 using ClinAgenda.src.Infrastructure.Repositories;
-using ClinAgendaAPI;
-using ClinAgendaAPI.StatusUseCase;
+//using ClinAgendaAPI;
+//using ClinAgendaAPI.StatusUseCase;
 using MySql.Data.MySqlClient;
 
 

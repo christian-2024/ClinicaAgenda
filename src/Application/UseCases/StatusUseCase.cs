@@ -1,8 +1,7 @@
 using ClinAgenda.src.Application.DTOs.Status;
 using ClinAgenda.src.Core.Interfaces;
 
-namespace ClinAgendaAPI.StatusUseCase
-{
+namespace ClinAgenda.src.Application.UseCases{
     public class StatusUseCase
     {
         // Declaração de um campo somente leitura (_statusRepository) que armazenará a instância do repositório de status.

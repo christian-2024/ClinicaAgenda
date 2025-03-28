@@ -7,7 +7,7 @@ namespace ClinAgenda.src.Application.DTOs.Specialty
 {
     public class SpecialtyDTO
     {
-        public int id { get; set; }
+        public int Id { get; set; }
 
         public required string Name { get; set; }
 

@@ -33,6 +33,30 @@ namespace ClinAgenda.src.WebAPI.Controllers
                 return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
             }
         }
+            
+            [HttpGet("listById/{id}")]
+            public async Task<IActionResult> GetSpecialtyByIdAsync(int id)
+            {
+                try
+                {
+                    if (id <= 0)
+                    {
+                        return BadRequest("ID inválido.");
+                    }
+                    var specialty = await _specialtyUsecase.GetSpecialtyByIdAsync(id);
+
+                    if (specialty == null)
+                    {
+                        return NotFound($"Especialidade com ID {id} não encontrada.");
+                    }
+                        return Ok(specialty);
+                }
+                catch (Exception ex)
+                {
+                    return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
+                }
+                
+            }
             [HttpPost("insert")]
             public async Task<IActionResult> CreateSpecialtyAsync([FromBody] SpecialtyInsertDTO specialty)
             {
@@ -57,31 +81,6 @@ namespace ClinAgenda.src.WebAPI.Controllers
                     return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
 
                 }
-            }
-            [HttpGet("listById/{id}")]
-            public async Task<IActionResult> GetSpecialtyByIdAsync(int id)
-            {
-                try
-                {
-                    if (id <= 0)
-                    {
-                        return BadRequest("ID inválido.");
-                    }
-                    var specialty = await _specialtyUsecase.GetSpecialtyByIdAsync(id);
-
-                    if (specialty == null)
-                    {
-                        return NotFound($"Especialidade com ID {id} não encontrada.");
-                    }
-                        return Ok(specialty);
-                }
-                catch (Exception ex)
-                {
-                    return StatusCode(500, $"Erro interno do servidor: {ex.Message}");
-                }
-                
-            }
-            
-        
+            }  
     }
 }
