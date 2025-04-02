@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ClinAgenda.src.Application.DTOs.Appointment
 {
-    public class AppointmentIsertDTO
+    public class AppointmentInsertDTO
     {
         public int Id { get; set;}
 

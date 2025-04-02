@@ -18,7 +18,7 @@ namespace ClinAgenda.src.Infrastructure.Repositories
         {
             _connection = connection;
         }
-        public async Task<IEnumerable<DoctorListDTO>> GetDoctorAsync(string? name, int? specialtyId, int? statusId, int offset, int itemsPerPage)
+        public async Task<IEnumerable<DoctorListDTO>> GetDoctorsAsync(string? name, int? specialtyId, int? statusId, int offset, int itemsPerPage)
         {
             var innerJoins = new StringBuilder(@"
             FROM DOCTOR D
@@ -141,8 +141,9 @@ namespace ClinAgenda.src.Infrastructure.Repositories
             return rowsAffected;
         }
 
-
-        
-    
+        public Task<IEnumerable<DoctorListDTO>> GetDoctorAsync(string? name, int? specialtyId, int? statusId, int offset, int pageSize)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
